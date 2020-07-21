@@ -22,6 +22,11 @@ function addTask(title, description) {
 
 function getTasks() {
   return new Promise((resolve, reject) => {
+    const tasks = store.list();
+
+    if (!tasks) {
+      reject("Unexpected Error");
+    }
     resolve(store.list());
   });
 }

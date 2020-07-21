@@ -120,9 +120,12 @@ const App = () => {
   };
 
   const fetchTasks = async () => {
-    const response = await fetch("/api/tasks");
-    const data = await response.json();
-    setTasks(await data);
+    fetch("/api/tasks")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setTasks(data);
+      });
   };
 
   useEffect(() => {

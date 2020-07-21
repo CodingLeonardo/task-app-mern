@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 
 db();
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "public")));
+}
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(PORT, function () {

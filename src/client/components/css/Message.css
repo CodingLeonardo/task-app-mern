@@ -1,0 +1,18 @@
+.Message-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+}
+
+.Message-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #95ca3e;
+  height: 3em;
+  border-radius: 0.5em;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 0.3em;
+}
